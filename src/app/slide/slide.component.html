@@ -1,0 +1,17 @@
+<input 
+    type="text"
+    class= "form-group"
+    #inputitem
+    (keyup.enter)="addItem(inputitem)"
+/> 
+<div *ngIf="items" class="list-group">
+    <button 
+        @slide
+        tyep="button"
+        class="list-group-item"
+        (click)="onRemove(item)"
+        *ngFor="let item of items">
+    {{item}}
+</button>
+</div>
+
